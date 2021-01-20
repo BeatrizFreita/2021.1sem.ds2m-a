@@ -9,6 +9,16 @@ public class Conta {
 	public boolean ativa;
 	public double chequeEspecial;
 	
+	public void setTipo(String tipo) {
+		
+		if (tipo.equals("Corrente")  || tipo.equals("Poupança")) {
+			this.tipo = tipo;
+		} else {
+			System.out.println("Tipo inválido");
+		}
+			
+	}
+	
 	public void depositar(double valorDeposito) {
 		
 		if (valorDeposito < 0) {
@@ -26,6 +36,10 @@ public class Conta {
 	
 	public double getSaldo(){
 		return saldo;
+	}
+	
+	public String getTitular () {
+		return "E ai gente";
 	}
 	
 	public void sacar(double valorDoSaque) {
